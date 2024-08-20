@@ -1,0 +1,39 @@
+Cubic function, O(n^3):
+    n = 5, elapsed time: 1828
+    n = 10, elapsed time: 8672
+    n = 20, elapsed time: 65191
+    n = 40, elapsed time: 499176
+    
+    Since each subseqeunt value of n is twice the previous, substituting 2n into n in the 
+    cubic function, n^3, results in 8n^3. Therefore, the expected ratio of elapsed times for subsequent n's,
+    e.g.,t(n=10)/t(n=5), should be 8 ((2n)^3/n^3=8n^3/n^3=8). The observed ratios are: 
+    t(n=40)/t(n=20) = 7.66, t(n=20)/t(n=10) = 7.52, t(n=10)/t(n=5) = 4.75. The ratios of subsequent
+    elapsed times for each n is consistent with the cubic function expectations. Though t(n=10),t(n=4)
+    = 4.75, t(n=20)/t(n=510 and t(n=40)/t(n=20) are both very close to the expected ratio of 8. The first
+    ratio may be inconsistent with the expected ratio because the values of n are relatively small.
+    
+    
+    
+Exponential function, O(2^n):
+    n = 5, elapsed time: 424364
+    n = 10, elapsed time: 649222
+    n = 20, elapsed time: 1641005
+    n = 40, elapsed time: 3519575
+    
+    The exponential function prints out the elapsed time for each recursive loop, though the only 
+    relevant elapsed time is the final elapsed time printed (corresponding to the outermost recursive loop).
+    The exponential function has the longest run time out of all the functions. The ratio of elapsed times of
+    subseqeunt n's is approximately 2.
+  
+  
+Constant function, O(1):
+    n = 5, elapsed time: 170
+    n = 10, elapsed time: 203
+    n = 20, elapsed time: 166
+    n = 40, elapsed time: 160
+    
+    The constant function for all n had elapsed times between 
+    160 and 203 nanoseconds. The elapsed time for each value of n
+    fluctuated within this small window and did not increase as n increased. 
+    Since the elapsed time for all n were within a small time interval and 
+    relatively similar, the function displays O(1) behavior.
